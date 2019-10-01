@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_padding_margin">
+
+    <RelativeLayout
+        android:id="@+id/user_info"
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_gradient_bordered">
+
+        <Button
+            android:id="@+id/btn_info_manage"
+            style="@style/default_white_small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/default_padding_margin"
+            android:background="@drawable/button_outlined_bordered"
+            android:text="@string/manage"
+            android:textAllCaps="false" />
+
+        <RelativeLayout
+            android:id="@+id/info_content_box"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/btn_info_manage"
+            android:layout_margin="@dimen/default_padding_margin">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_smiling_avt" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/default_padding_margin"
+                android:layout_toEndOf="@id/avatar">
+
+                <TextView
+                    android:id="@+id/user_username"
+                    style="@style/default_white_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:id="@+id/user_level"
+                    style="@style/default_white_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_username"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/currency_info_box"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/user_info"
+        android:layout_marginTop="@dimen/default_padding_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/system_box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/system_ammount"
+                    style="@style/default_orange_tiny_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/default_black_small_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/ppn_system"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack" />
+
+            <RelativeLayout
+                android:id="@+id/total_box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/ppn_total_amount"
+                    style="@style/default_orange_small_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/default_orange_small_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/total"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack" />
+
+            <RelativeLayout
+                android:id="@+id/profit_box"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/ppn_profit_amount"
+                    style="@style/default_orange_tiny_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/default_black_small_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/profit"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/currency_assets_separate_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/currency_info_box"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:background="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/assets_label"
+        style="@style/default_black_medium_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currency_assets_separate_line"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginBottom="@dimen/default_padding_margin"
+        android:text="@string/assets"
+        android:textStyle="bold" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/list_assets_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/assets_label">
+        <ListView
+            android:id="@+id/list_assets"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

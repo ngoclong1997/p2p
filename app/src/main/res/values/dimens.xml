@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding_margin">10dp</dimen>
+    <dimen name="default_text_small">8pt</dimen>
+    <dimen name="default_text_tiny">6pt</dimen>
+    <dimen name="default_text_medium">10pt</dimen>
+    <dimen name="default_text_big">13pt</dimen>
+    <dimen name="bigger_padding_margin">35dp</dimen>
+    <dimen name="big_padding_margin">25dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

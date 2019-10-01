@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.p2p.activities.SystemSendingActivity">
+
+    <RelativeLayout
+        android:id="@+id/contact_us_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/default_padding_margin"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@string/default_font"
+            android:text="@string/contact_us"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_text_medium"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact_us_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contact_us_header"
+        android:layout_margin="@dimen/default_padding_margin">
+
+        <TextView
+            android:id="@+id/contact_us_describe"
+            style="@style/default_black_tiny_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_us_description" />
+
+        <EditText
+            android:layout_marginTop="@dimen/default_padding_margin"
+            android:id="@+id/contact_us_message"
+            android:layout_below="@id/contact_us_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/default_padding_margin"
+            android:textSize="8pt"
+            android:background="@drawable/bg_outlined_orange_bordered"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:layout_below="@id/contact_us_message"
+            android:id="@+id/contact_us_submit_button"
+            android:layout_marginTop="@dimen/default_padding_margin"
+            android:background="@drawable/button_orange_bordered"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

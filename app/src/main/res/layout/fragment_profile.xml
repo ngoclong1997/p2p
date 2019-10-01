@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/mine_header"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_gradient">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/mine_avatar"
+                android:layout_marginBottom="@dimen/default_padding_margin"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_smiling_avt"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                style="@style/default_white_small_text"
+                android:layout_below="@+id/mine_avatar"
+                android:id="@+id/mine_name"
+                android:text="longnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                style="@style/default_white_small_text"
+                android:layout_below="@+id/mine_name"
+                android:id="@+id/mine_phone"
+                android:text="longnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_below="@+id/mine_header"
+        android:id="@+id/mine_options"
+        android:layout_width="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@drawable/listview_separator"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</RelativeLayout>

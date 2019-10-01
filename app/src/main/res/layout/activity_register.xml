@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.p2p.activities.SystemSendingActivity">
+
+    <RelativeLayout
+        android:id="@+id/register_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/default_padding_margin"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@string/default_font"
+            android:text="@string/register"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_text_medium"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/register_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/register_header"
+        android:fillViewport="true"
+        tools:context="com.p2p.activities.LoginActivity">
+
+        <RelativeLayout
+            android:paddingBottom="40dp"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:id="@+id/register_input_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding_margin">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/register_cpp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ccp_defaultNameCode="VN"
+                app:ccp_showFullName="true"
+                app:ccp_showNameCode="false"
+                app:ccp_showPhoneCode="false"
+                app:ccp_textGravity="LEFT" />
+
+            <EditText
+                android:id="@+id/register_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_cpp"
+                android:layout_marginTop="@dimen/default_padding_margin"
+                android:hint="@string/register_username_with_condition"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/register_mobile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_username"
+                android:layout_marginTop="@dimen/default_padding_margin"
+                android:hint="@string/mobile_phone_hint"
+                android:inputType="phone"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/register_email_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_mobile_phone">
+
+                <EditText
+                    android:id="@+id/register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding_margin"
+                    android:layout_toStartOf="@id/register_get_validation_code"
+                    android:hint="@string/email_hint"
+                    android:inputType="textEmailAddress" />
+
+                <TextView
+                    android:id="@+id/register_get_validation_code"
+                    style="@style/default_orange_tiny_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/get_validation_code" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/register_validation_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_email_box"
+                android:layout_marginTop="@dimen/default_padding_margin"
+                android:hint="@string/validation_code_hint"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_validation_code"
+                android:layout_marginTop="@dimen/default_padding_margin"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+
+                />
+
+            <EditText
+                android:id="@+id/register_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_password"
+                android:layout_marginTop="@dimen/default_padding_margin"
+                android:hint="@string/password_confirm_hint"
+                android:inputType="textPassword" />
+
+            <RelativeLayout
+                android:id="@+id/register_invitation_code_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_password_confirm">
+
+                <EditText
+                    android:id="@+id/register_invitation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding_margin"
+                    android:layout_toStartOf="@id/register_qr_scanner"
+                    android:hint="@string/invitation_code_hint"
+                    android:inputType="textEmailAddress" />
+
+                <ImageView
+                    android:id="@+id/register_qr_scanner"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_qrcode" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/register_button_register"
+                style="@style/default_white_small_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_invitation_code_box"
+                android:layout_marginTop="@dimen/bigger_padding_margin"
+                android:background="@drawable/button_orange_bordered"
+                android:text="@string/register"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

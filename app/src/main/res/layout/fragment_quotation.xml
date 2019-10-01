@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/quotation_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_gradient">
+        <TextView
+            android:id="@+id/quotation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding_margin"
+            android:layout_centerHorizontal="true"
+            style="@style/default_white_small_text"
+            android:text="@string/quotation"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="300.5dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@id/quotation_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_white_bordered"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="5dp">
+        <RelativeLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/quotation"
+            android:layout_width="150dp"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/quotation_text"
+                style="@style/default_orange_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/quotation" />
+        </RelativeLayout>
+
+        <View
+            android:layout_gravity="center"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorGray" />
+        <RelativeLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/quotation_news"
+            android:layout_gravity="end"
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_centerInParent="true"
+                android:id="@+id/news_text"
+                style="@style/default_black_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/news" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/quotation_header"
+        android:layout_marginTop="30dp"
+        android:id="@+id/quotation_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

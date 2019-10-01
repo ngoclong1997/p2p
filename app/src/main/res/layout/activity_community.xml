@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.p2p.activities.SystemSendingActivity">
+
+    <RelativeLayout
+        android:id="@+id/community_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/default_padding_margin"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@string/default_font"
+            android:text="@string/community"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_text_medium"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/community_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/community_header"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginBottom="@dimen/default_padding_margin"
+                style="@style/default_orange_small_text"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/team_member_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_below="@id/team_member_value"
+                android:id="@+id/team_member_icon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_person"
+                android:tint="@color/colorPrimary"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                style="@style/default_black_tiny_text"
+                android:layout_below="@id/team_member_icon"
+                android:id="@+id/team_member_text"
+                android:layout_width="wrap_content"
+                android:text="@string/team_member"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorBlack" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginBottom="@dimen/default_padding_margin"
+                style="@style/default_orange_small_text"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/team_value_value"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_below="@id/team_value_value"
+                android:id="@+id/team_value_icon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_investment"
+                android:tint="@color/colorPrimary"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                style="@style/default_black_tiny_text"
+                android:layout_below="@id/team_value_icon"
+                android:id="@+id/team_value_text"
+                android:layout_width="wrap_content"
+                android:text="@string/team_value"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorBlack" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_marginBottom="@dimen/default_padding_margin"
+                style="@style/default_orange_small_text"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/team_profit_value"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_below="@id/team_profit_value"
+                android:id="@+id/team_profit_icon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_team_profit"
+                android:tint="@color/colorPrimary"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:layout_centerHorizontal="true"
+                style="@style/default_black_tiny_text"
+                android:layout_below="@id/team_profit_icon"
+                android:id="@+id/team_profit_text"
+                android:layout_width="wrap_content"
+                android:text="@string/team_profit"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

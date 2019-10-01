@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.p2p.activities.ProfitSendingActivity">
+
+    <RelativeLayout
+        android:id="@+id/profit_sending_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/default_padding_margin"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+        <TextView
+            android:id="@+id/title"
+            android:fontFamily="@string/default_font"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/default_text_medium"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ppn_profit_send"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/profit_sending_body"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:layout_height="match_parent"
+        android:layout_below="@id/profit_sending_header">
+        <RelativeLayout
+            android:id="@+id/receiver_address_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/profit_sending_receiver_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/profit_sending_receiver_address_qr_scanner"
+                android:hint="@string/receiver_address"
+                android:layout_marginEnd="@dimen/default_padding_margin"
+                android:inputType="text" />
+            <ImageView
+                android:id="@+id/profit_sending_receiver_address_qr_scanner"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_qrcode" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/profit_sending_amount"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/receiver_address_box"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding_margin"
+            android:hint="@string/amount"
+            android:inputType="numberDecimal" />
+
+        <RelativeLayout
+            android:id="@+id/profit_sending_type"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profit_sending_amount"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/abt_us_user_agreement_text"
+                style="@style/default_black_medium_text"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wallet_type" />
+
+            <TextView
+                android:id="@+id/wallet_type_value"
+                android:fontFamily="@string/default_font"
+                android:textColor="#888"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/chev_icon"
+                style="@style/default_black_small_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:id="@+id/chev_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_chevron_right_black_24dp" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/profit_sending_type"
+            android:background="#888" />
+
+        <Button
+            android:id="@+id/send_profit_button"
+            style="@style/default_white_small_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="@dimen/bigger_padding_margin"
+            android:background="@drawable/button_orange_bordered"
+            android:text="@string/send"
+            android:textAllCaps="false" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

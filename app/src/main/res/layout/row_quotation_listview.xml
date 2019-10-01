@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_padding_margin">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/quotation_coin_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="@dimen/default_padding_margin"
+        />
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/quotation_coin_icon"
+        android:id="@+id/quotation_coin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/default_black_medium_text"
+        />
+    <TextView
+        style="@style/default_orange_small_text"
+        android:textSize="9pt"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:layout_centerVertical="true"
+        android:id="@+id/quotation_coin_value"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

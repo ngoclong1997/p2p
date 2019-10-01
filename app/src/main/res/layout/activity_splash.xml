@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.p2p.activities.TotalSendingActivity">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_logo"/>
+
+    <ProgressBar
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/bigger_padding_margin"
+        android:layout_marginStart="@dimen/bigger_padding_margin"
+        android:layout_height="10dp"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+
+</RelativeLayout>
